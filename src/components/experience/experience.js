@@ -40,7 +40,7 @@ class Experience extends Component{
                 <div>Work Experience</div>
                 <button type="button" onClick={this.newXp}>New Experience</button>
                 {this.state.xp.map((xp)=>{
-                  return <SingleXp exp={xp} key={xp.id} del={()=>{this.deleteXp(xp.id)}}/>
+                  return <SingleXp  exp={xp} key={xp.id} del={()=>{this.deleteXp(xp.id)}}/>
                 })}
             </div>
         )  
