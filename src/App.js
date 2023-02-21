@@ -4,7 +4,7 @@ import Experience from "./components/experience/experience";
 import Education from "./components/education/education";
 import Header from "./components/Header/header";
 import Contacts from "./components/contacts/contacts";
-
+import Skills from "./components/skills/skills"
 
 class App extends Component{
   constructor(){
@@ -20,6 +20,7 @@ class App extends Component{
       <Education/>
       <Header/>
       <Contacts/>
+      <Skills/>
     </div>
     )
   }
