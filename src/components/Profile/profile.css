@@ -1,0 +1,8 @@
+
+
+#profile{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+}

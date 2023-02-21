@@ -1,4 +1,5 @@
 import React,{ Component } from "react";
+import Profile from "./components/Profile/profile"
 
 class App extends Component{
   constructor(){
@@ -8,7 +9,7 @@ class App extends Component{
 
   render(){
     return(
-      <>Hello People</>
+      <Profile/>
     )
   }
   
