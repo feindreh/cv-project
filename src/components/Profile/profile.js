@@ -1,5 +1,4 @@
 import React,{ Component } from "react";
-import ProfileText from "./profileText";
 import "./profile.css"
 
 class Profile extends Component{
