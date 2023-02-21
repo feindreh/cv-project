@@ -10,7 +10,7 @@ class Experience extends Component{
   constructor(){
     super();
     this.state = {
-        xp:[]
+      xp:[]
     }
     this.newXp = this.newXp.bind(this)
     this.XpFactory = this.XpFactory.bind(this)
