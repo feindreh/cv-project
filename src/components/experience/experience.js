@@ -14,6 +14,7 @@ class Experience extends Component{
     }
     this.newXp = this.newXp.bind(this)
     this.XpFactory = this.XpFactory.bind(this)
+    this.deleteXp = this.deleteXp.bind(this)
   }
 
   id=0
@@ -27,6 +28,12 @@ class Experience extends Component{
       xp: [...this.state.xp,this.XpFactory()]
     })
   }
+  deleteXp(Id){
+    this.setState({
+      xp:this.state.xp.filter((xp) => xp.id !== Id)
+    })
+    console.log(this.state)
+  }
 
   render(){
         return(
@@ -34,7 +41,7 @@ class Experience extends Component{
                 <div>Work Experience</div>
                 <button type="button" onClick={this.newXp}>New Experience</button>
                 {this.state.xp.map((xp)=>{
-                  return <SingleXp exp={xp} key={xp.id}/>
+                  return <SingleXp exp={xp} key={xp.id} del={()=>{this.deleteXp(xp.id)}}/>
                 })}
             </div>
         )  
