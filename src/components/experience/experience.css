@@ -5,10 +5,9 @@
     width: fit-content;
 }
 
-.xp{
+.singleXp{
     border:solid black 1px;
-    margin:5px;
+    margin:15px;
     padding:5px;
-    width: fit-content;
-
+    width: fit-content; 
 }

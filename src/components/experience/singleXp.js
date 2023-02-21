@@ -16,19 +16,22 @@ class SingleXp extends Component{
       })
     }
 
-    unEdit(e){
-      // this.setState({
-      //   edit:false
-      // })
+    unEdit(){
+      
       const newObj = {
         start:document.querySelector(`.xp-${this.props.exp.id} .start`).value,
         end:document.querySelector(`.xp-${this.props.exp.id} .end`).value,
         name:document.querySelector(`.xp-${this.props.exp.id} .name`).value,
         company:document.querySelector(`.xp-${this.props.exp.id} .company`).value,
         text:document.querySelector(`.xp-${this.props.exp.id} .text`).value,
+        id:this.props.exp.id,
       }
-     console.log(newObj)
-      
+
+      this.props.edit(newObj)
+
+      this.setState({
+        edit:false
+      })
     }
     
   
@@ -41,7 +44,7 @@ class SingleXp extends Component{
 
         if(this.state.edit ===false){
           return(
-            <div className={`xp-${id}`}>
+            <div className={`xp-${id} singleXp`}>
               <div>Start {start} - End {end}</div>
               <div>{name}</div>
               <div>Company:{company}</div>
@@ -52,7 +55,7 @@ class SingleXp extends Component{
           )  
         }else{
           return(
-            <div className={`xp-${id}`}>
+            <div className={`xp-${id} singleXp`}>
               <div>Start <input className="start" type="text"defaultValue={start}></input>- End <input type="text" className="end"defaultValue={end}></input></div>
               <div>What did you do?(Headline)<input type="text" className="name" defaultValue={name}></input></div>
               <div>Company:<input type="text" className="company" defaultValue={company}></input></div>
