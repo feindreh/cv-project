@@ -16,7 +16,6 @@ class SingleXp extends Component{
 
           return(
               <div className="xp">
-               <div>ID:{this.props.exp.id}</div>
                <div>Start {start} - End {end}</div>
                <div>{name}</div>
                <div>Company:{company}</div>

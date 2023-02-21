@@ -32,7 +32,6 @@ class Experience extends Component{
     this.setState({
       xp:this.state.xp.filter((xp) => xp.id !== Id)
     })
-    console.log(this.state)
   }
 
   render(){
